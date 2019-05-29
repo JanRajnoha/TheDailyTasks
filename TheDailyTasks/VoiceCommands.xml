@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="TDTComandSet_en-us">
+    <AppName>The Daily Tasks</AppName>
+    <Example>Show my tasks</Example>
+ 
+    <Command Name="ShowMyTasks">
+      <Example>Show my tasks</Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Show [me] [my] [today] {Style} tasks [for] [today] [from]</ListenFor>      
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Show [me] [my] [today] tasks {Style} [for] [today] [from]</ListenFor>      
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Show [me] [my] {Style} [today] tasks [for] [today] [from]</ListenFor>      
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Show [me] [my] [today] tasks [for] [today] [from]</ListenFor>
+      <ListenFor RequireAppName="ExplicitlySpecified">Show me {builtin:AppName}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Show my [star]ship</ListenFor>
+      <Feedback>Showing your tasks</Feedback>
+      <VoiceCommandService Target="TDTCortanaCommandServices"/>
+    </Command>
+ 
+    <Command Name="ShowDetailForSpecificTask">
+      <Example>Show detail for task My task</Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Show detail[s] [of] [for] [my] [task] {Tasks}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Inspect detail[s] [of] [for] [my] [task] {Tasks}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Show property [of] [for] [my] [task] {Tasks}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Inspect property [of] [for] [my] [task] {Tasks}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Show properties [of] [for] [my] [task] {Tasks}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Inspect propertiesc [of] [for] [my] [task] {Tasks}</ListenFor>
+      <Feedback>Showing details about your task</Feedback>
+      <VoiceCommandService Target="TDTCortanaCommandServices"/>
+    </Command>
+
+    <Command Name="DeleteSpecificTask">
+      <Example>Delete my task My task</Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Delete my [task] {Tasks}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Remove my [task] {Tasks}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Erase my [task] {Tasks}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Destroy my [task] {Tasks}</ListenFor>
+      <Feedback>Deleting your task</Feedback>
+      <VoiceCommandService Target="TDTCortanaCommandServices"/>
+    </Command>
+ 
+    <Command Name="CompleteSpecificTask">
+      <Example>Complete my task My task</Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Complete my [task] {Tasks}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Finish my [task] {Tasks}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Do my [task] {Tasks}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">Done my [task] {Tasks}</ListenFor>
+      <Feedback>Completing your task</Feedback>
+      <VoiceCommandService Target="TDTCortanaCommandServices"/>
+    </Command>
+
+    <PhraseList Label="Style">
+      <Item>completed</Item>
+      <Item>uncompleted</Item>
+      <Item>not started</Item>
+    </PhraseList> 
+
+    <PhraseList Label="Tasks">
+    </PhraseList>
+  </CommandSet>
+</VoiceCommands>

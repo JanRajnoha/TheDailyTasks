@@ -1,0 +1,68 @@
+﻿<UserControl
+    x:Class="TheDailyTasks.ItemTask"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TheDailyTasks"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="200"
+    d:DesignWidth="600">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock x:Name="textBlock" 
+                   HorizontalAlignment="Left" 
+                   TextWrapping="Wrap"
+                   Text="Binding Name"
+                   FontSize="30"
+                   VerticalAlignment="Top"/>
+
+        <TextBlock x:Name="textBloc1"
+                   Grid.Row="1"
+                   HorizontalAlignment="Left" 
+                   TextWrapping="Wrap"
+                   Text="Binding Name"
+                   FontSize="30"
+                   VerticalAlignment="Top"/>
+
+        <TextBlock x:Name="textBloc2" 
+                   Grid.Row="2"
+                   HorizontalAlignment="Left" 
+                   TextWrapping="Wrap"
+                   Text="Binding Name"
+                   FontSize="30"
+                   VerticalAlignment="Top"/>
+
+        <TextBlock x:Name="textBloc3" 
+                   Grid.Row="3"
+                   HorizontalAlignment="Left" 
+                   TextWrapping="Wrap"
+                   Text="Binding Name"
+                   FontSize="30"
+                   VerticalAlignment="Top"/>
+        
+        <Button x:Name="button" 
+                Foreground="{ThemeResource SystemControlHighlightAccentBrush}"
+                Grid.Column="1"
+                Grid.Row="1"
+                Grid.RowSpan="2"
+                Content="&#xE8FB;"
+                FontFamily="Segoe MDL2 Assets"
+                HorizontalAlignment="Center"
+                FontSize="50"
+                VerticalAlignment="Center" />
+        
+
+    </Grid>
+</UserControl>
